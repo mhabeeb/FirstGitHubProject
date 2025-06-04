@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<map>
+  <node name="A3organization" refs="0" depth="0" schema="public" label="A 3organization" schemaLabel="Public" />
+  <node name="A3patient" refs="0" depth="0" schema="public" label="A 3patient" schemaLabel="Public" />
+  <node name="public_site_content" refs="0" depth="0" schema="public" label="Public Site Content" schemaLabel="Public" />
+</map>

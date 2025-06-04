@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="public" baseTable="a3organization" alias="a3organization" created="2025-06-04T12:31:43" modified="2025-06-04T12:31:44" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="id" fieldName="ID" label="Id" />
+    <column name="providerid" fieldName="Providerid" label="Providerid" />
+    <column name="payerid" fieldName="Payerid" label="Payerid" />
+    <column name="orgname" fieldName="Orgname" label="Orgname" />
+    <column name="orgtype" fieldName="Orgtype" label="Orgtype" />
+    <column name="providertype" fieldName="Providertype" label="Providertype" />
+    <column name="active" fieldName="Active" label="Active" />
+    <column name="phone" fieldName="Phone" label="Phone" />
+    <column name="email" fieldName="Email" label="Email" />
+    <column name="addressline1" fieldName="Addressline1" label="Addressline1" />
+    <column name="addressline2" fieldName="Addressline2" label="Addressline2" />
+    <column name="city" fieldName="City" label="City" />
+    <column name="state" fieldName="State" label="State" />
+    <column name="postalcode" fieldName="Postalcode" label="Postalcode" />
+    <column name="country" fieldName="Country" label="Country" />
+    <column name="createduser" fieldName="Createduser" label="Createduser" />
+    <column name="updateduser" fieldName="Updateduser" label="Updateduser" />
+    <column name="createddatetime" fieldName="Createddatetime" label="Createddatetime" />
+    <column name="updateddatetime" fieldName="Updateddatetime" label="Updateddatetime" />
+    <column name="nphiesid" fieldName="Nphiesid" label="Nphiesid" />
+    <column name="masterid" fieldName="Masterid" label="Masterid" />
+    <column name="vatno" fieldName="Vatno" label="Vatno" />
+    <column name="crno" fieldName="Crno" label="Crno" />
+  </columns>
+</dataModel>

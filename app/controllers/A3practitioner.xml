@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="A3practitioner" conflictDetection="overwriteChanges" label="A 3practitioner" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"a3practitioner"."id" "ID"
+	,"a3practitioner"."practitionerid" "Practitionerid"
+	,"a3practitioner"."title" "Title"
+	,"a3practitioner"."firstname" "Firstname"
+	,"a3practitioner"."lastname" "Lastname"
+	,"a3practitioner"."licensenumber" "Licensenumber"
+	,"a3practitioner"."qualification" "Qualification"
+	,"a3practitioner"."active" "Active"
+	,"a3practitioner"."gender" "Gender"
+	,"a3practitioner"."birthdate" "Birthdate"
+	,"a3practitioner"."photo" "Photo"
+	,"a3practitioner"."phone" "Phone"
+	,"a3practitioner"."email" "Email"
+	,"a3practitioner"."addresstext" "Addresstext"
+	,"a3practitioner"."city" "City"
+	,"a3practitioner"."state" "State"
+	,"a3practitioner"."postalcode" "Postalcode"
+	,"a3practitioner"."country" "Country"
+	,"a3practitioner"."language" "Language"
+	,"a3practitioner"."createduser" "Createduser"
+	,"a3practitioner"."updateduser" "Updateduser"
+	,"a3practitioner"."createddatetime" "Createddatetime"
+	,"a3practitioner"."updateddatetime" "Updateddatetime"
+	,"a3practitioner"."providerid" "Providerid"
+	,"a3practitioner"."departmentid" "Departmentid"
+	,"a3practitioner"."firstgtin" "Firstgtin"
+	,"a3practitioner"."firstmedicationid" "Firstmedicationid"
+	,"a3practitioner"."followupgtin" "Followupgtin"
+	,"a3practitioner"."followupmedicationid" "Followupmedicationid"
+	,"a3practitioner"."deptname" "Deptname"
+from "public"."a3practitioner" "a3practitioner"
+]]></text>
+    </command>
+  </commands>
+  <fields>
+    <field name="ID" type="Int32" allowNulls="false" isPrimaryKey="true" label="Id" />
+    <field name="Practitionerid" type="Int32" label="Practitionerid" showInSummary="true" />
+    <field name="Title" type="String" label="Title" length="50" showInSummary="true" />
+    <field name="Firstname" type="String" label="Firstname" length="50" showInSummary="true" />
+    <field name="Lastname" type="String" label="Lastname" length="50" showInSummary="true" />
+    <field name="Licensenumber" type="String" label="Licensenumber" length="50" showInSummary="true" />
+    <field name="Qualification" type="String" label="Qualification" length="50" />
+    <field name="Active" type="Boolean" label="Active" />
+    <field name="Gender" type="String" label="Gender" length="15" />
+    <field name="Birthdate" type="DateTime" label="Birthdate" />
+    <field name="Photo" type="String" allowQBE="false" allowSorting="false" label="Photo" />
+    <field name="Phone" type="String" label="Phone" length="50" />
+    <field name="Email" type="String" label="Email" length="50" />
+    <field name="Addresstext" type="String" label="Addresstext" length="50" />
+    <field name="City" type="String" label="City" length="50" />
+    <field name="State" type="String" label="State" length="50" />
+    <field name="Postalcode" type="String" label="Postalcode" length="50" />
+    <field name="Country" type="String" label="Country" length="50" />
+    <field name="Language" type="String" label="Language" length="50" />
+    <field name="Createduser" type="String" label="Createduser" length="128" />
+    <field name="Updateduser" type="String" label="Updateduser" length="128" />
+    <field name="Createddatetime" type="DateTime" label="Createddatetime" />
+    <field name="Updateddatetime" type="DateTime" label="Updateddatetime" />
+    <field name="Providerid" type="Int32" label="Providerid" />
+    <field name="Departmentid" type="Int32" label="Departmentid" />
+    <field name="Firstgtin" type="String" label="Firstgtin" length="50" />
+    <field name="Firstmedicationid" type="Int32" label="Firstmedicationid" />
+    <field name="Followupgtin" type="String" label="Followupgtin" length="50" />
+    <field name="Followupmedicationid" type="Int32" label="Followupmedicationid" />
+    <field name="Deptname" type="String" label="Deptname" length="150" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="A 3practitioner">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="ID" columns="15" />
+        <dataField fieldName="Practitionerid" columns="15" />
+        <dataField fieldName="Title" columns="50" />
+        <dataField fieldName="Firstname" columns="50" />
+        <dataField fieldName="Lastname" columns="50" />
+        <dataField fieldName="Licensenumber" columns="50" />
+        <dataField fieldName="Qualification" columns="50" />
+        <dataField fieldName="Active" />
+        <dataField fieldName="Gender" columns="15" />
+        <dataField fieldName="Birthdate" columns="10" />
+        <dataField fieldName="Photo" rows="5" />
+        <dataField fieldName="Phone" columns="50" />
+        <dataField fieldName="Email" columns="50" />
+        <dataField fieldName="Addresstext" columns="50" />
+        <dataField fieldName="City" columns="50" />
+        <dataField fieldName="State" columns="50" />
+        <dataField fieldName="Postalcode" columns="50" />
+        <dataField fieldName="Country" columns="50" />
+        <dataField fieldName="Language" columns="50" />
+        <dataField fieldName="Createduser" />
+        <dataField fieldName="Updateduser" />
+        <dataField fieldName="Createddatetime" columns="10" />
+        <dataField fieldName="Updateddatetime" columns="10" />
+        <dataField fieldName="Providerid" columns="15" />
+        <dataField fieldName="Departmentid" columns="15" />
+        <dataField fieldName="Firstgtin" columns="50" />
+        <dataField fieldName="Firstmedicationid" columns="15" />
+        <dataField fieldName="Followupgtin" columns="50" />
+        <dataField fieldName="Followupmedicationid" columns="15" />
+        <dataField fieldName="Deptname" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review A 3practitioner">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="A 3practitioner" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="ID" columns="15" />
+            <dataField fieldName="Practitionerid" columns="15" />
+            <dataField fieldName="Title" columns="50" />
+            <dataField fieldName="Firstname" columns="50" />
+            <dataField fieldName="Lastname" columns="50" />
+            <dataField fieldName="Licensenumber" columns="50" />
+            <dataField fieldName="Qualification" columns="50" />
+            <dataField fieldName="Active" />
+            <dataField fieldName="Gender" columns="15" />
+            <dataField fieldName="Birthdate" columns="10" />
+            <dataField fieldName="Photo" rows="5" />
+            <dataField fieldName="Phone" columns="50" />
+            <dataField fieldName="Email" columns="50" />
+            <dataField fieldName="Addresstext" columns="50" />
+            <dataField fieldName="City" columns="50" />
+            <dataField fieldName="State" columns="50" />
+            <dataField fieldName="Postalcode" columns="50" />
+            <dataField fieldName="Country" columns="50" />
+            <dataField fieldName="Language" columns="50" />
+            <dataField fieldName="Createduser" />
+            <dataField fieldName="Updateduser" />
+            <dataField fieldName="Createddatetime" columns="10" />
+            <dataField fieldName="Updateddatetime" columns="10" />
+            <dataField fieldName="Providerid" columns="15" />
+            <dataField fieldName="Departmentid" columns="15" />
+            <dataField fieldName="Firstgtin" columns="50" />
+            <dataField fieldName="Firstmedicationid" columns="15" />
+            <dataField fieldName="Followupgtin" columns="50" />
+            <dataField fieldName="Followupmedicationid" columns="15" />
+            <dataField fieldName="Deptname" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New A 3practitioner">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="ID" columns="15" />
+            <dataField fieldName="Practitionerid" columns="15" />
+            <dataField fieldName="Title" columns="50" />
+            <dataField fieldName="Firstname" columns="50" />
+            <dataField fieldName="Lastname" columns="50" />
+            <dataField fieldName="Licensenumber" columns="50" />
+            <dataField fieldName="Qualification" columns="50" />
+            <dataField fieldName="Active" />
+            <dataField fieldName="Gender" columns="15" />
+            <dataField fieldName="Birthdate" columns="10" />
+            <dataField fieldName="Photo" rows="5" />
+            <dataField fieldName="Phone" columns="50" />
+            <dataField fieldName="Email" columns="50" />
+            <dataField fieldName="Addresstext" columns="50" />
+            <dataField fieldName="City" columns="50" />
+            <dataField fieldName="State" columns="50" />
+            <dataField fieldName="Postalcode" columns="50" />
+            <dataField fieldName="Country" columns="50" />
+            <dataField fieldName="Language" columns="50" />
+            <dataField fieldName="Createduser" />
+            <dataField fieldName="Updateduser" />
+            <dataField fieldName="Createddatetime" columns="10" />
+            <dataField fieldName="Updateddatetime" columns="10" />
+            <dataField fieldName="Providerid" columns="15" />
+            <dataField fieldName="Departmentid" columns="15" />
+            <dataField fieldName="Firstgtin" columns="50" />
+            <dataField fieldName="Firstmedicationid" columns="15" />
+            <dataField fieldName="Followupgtin" columns="50" />
+            <dataField fieldName="Followupmedicationid" columns="15" />
+            <dataField fieldName="Deptname" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

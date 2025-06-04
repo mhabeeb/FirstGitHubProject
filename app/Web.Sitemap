@@ -3,6 +3,7 @@
   <siteMapNode title="^SiteHome^Home^SiteHome^" description="" url="~/index.html">
     <siteMapNode title="^HomePath^Home^HomePath^" description="^HomeDesc^Application home page^HomeDesc^" url="~/pages/home" cssClass="Wide" />
     <siteMapNode title="A 3patient" description="View A 3patient" url="~/pages/a3patient" />
+    <siteMapNode title="A 3practitioner" description="View A 3practitioner" url="~/pages/a3practitioner" />
     <siteMapNode title="Public Site Content" description="View Public Site Content" url="~/pages/public_site_content" />
   </siteMapNode>
 </siteMap>

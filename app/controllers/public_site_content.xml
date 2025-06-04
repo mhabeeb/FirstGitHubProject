@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="public_site_content" conflictDetection="overwriteChanges" label="Public Site Content" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"site_content"."site_content_id" "site_content_id"
+	,"site_content"."file_name" "file_name"
+	,"site_content"."path" "path"
+	,"site_content"."content_type" "content_type"
+	,"site_content"."length" "length"
+	,"site_content"."data" "data"
+	,"site_content"."text" "text"
+	,"site_content"."schedule" "schedule"
+	,"site_content"."schedule_exceptions" "schedule_exceptions"
+	,"site_content"."cache_profile" "cache_profile"
+	,"site_content"."created_date" "created_date"
+	,"site_content"."modified_date" "modified_date"
+	,"site_content"."createduser" "createduser"
+	,"site_content"."updateduser" "updateduser"
+	,"site_content"."createddatetime" "createddatetime"
+	,"site_content"."updateddatetime" "updateddatetime"
+from "public"."site_content" "site_content"
+]]></text>
+    </command>
+    <command id="site_content_idUniqueIdentifierCommand" type="Text" event="Inserting">
+      <text><![CDATA[select gen_random_uuid()]]></text>
+      <output>
+        <fieldOutput fieldName="site_content_id" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="site_content_id" type="Guid" allowNulls="false" isPrimaryKey="true" default="gen_random_uuid()" label="Site Content Id" />
+    <field name="file_name" type="String" allowNulls="false" label="File Name" length="150" showInSummary="true" />
+    <field name="path" type="String" label="Path" length="150" showInSummary="true" />
+    <field name="content_type" type="String" default="'text/plain'::character varying" label="Content Type" length="150" showInSummary="true" />
+    <field name="length" type="Int32" label="Length" showInSummary="true" />
+    <field name="data" type="Byte[]" onDemand="true" sourceFields="site_content_id" onDemandHandler="site_contentdata" onDemandStyle="Thumbnail" allowQBE="false" allowSorting="false" label="Data" showInSummary="true" />
+    <field name="text" type="String" allowQBE="false" allowSorting="false" label="Text" />
+    <field name="schedule" type="String" label="Schedule" length="150" />
+    <field name="schedule_exceptions" type="String" label="Schedule Exceptions" length="150" />
+    <field name="cache_profile" type="String" label="Cache Profile" length="50" />
+    <field name="created_date" type="DateTime" label="Created Date" />
+    <field name="modified_date" type="DateTime" label="Modified Date" />
+    <field name="createduser" type="String" label="Createduser" length="128" />
+    <field name="updateduser" type="String" label="Updateduser" length="128" />
+    <field name="createddatetime" type="DateTime" label="Createddatetime" />
+    <field name="updateddatetime" type="DateTime" label="Updateddatetime" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Public Site Content" sortExpression="Path, FileName">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="file_name" />
+        <dataField fieldName="path" />
+        <dataField fieldName="content_type" />
+        <dataField fieldName="length" columns="15" />
+        <dataField fieldName="data" columns="15" />
+        <dataField fieldName="text" rows="5" />
+        <dataField fieldName="schedule" />
+        <dataField fieldName="schedule_exceptions" />
+        <dataField fieldName="cache_profile" columns="50" />
+        <dataField fieldName="created_date" columns="10" />
+        <dataField fieldName="modified_date" columns="10" />
+        <dataField fieldName="createduser" />
+        <dataField fieldName="updateduser" />
+        <dataField fieldName="createddatetime" dataFormatString="t" columns="10" />
+        <dataField fieldName="updateddatetime" dataFormatString="t" columns="10" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Public Site Content">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Public Site Content" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="file_name" />
+            <dataField fieldName="path" />
+            <dataField fieldName="content_type" />
+            <dataField fieldName="length" columns="15" />
+            <dataField fieldName="data" columns="15" />
+            <dataField fieldName="text" rows="5" />
+            <dataField fieldName="schedule" />
+            <dataField fieldName="schedule_exceptions" />
+            <dataField fieldName="cache_profile" columns="50" />
+            <dataField fieldName="created_date" columns="10" />
+            <dataField fieldName="modified_date" columns="10" />
+            <dataField fieldName="createduser" />
+            <dataField fieldName="updateduser" />
+            <dataField fieldName="createddatetime" dataFormatString="t" columns="10" />
+            <dataField fieldName="updateddatetime" dataFormatString="t" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Public Site Content">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="file_name" />
+            <dataField fieldName="path" />
+            <dataField fieldName="content_type" />
+            <dataField fieldName="length" columns="15" />
+            <dataField fieldName="data" columns="15" />
+            <dataField fieldName="text" rows="5" />
+            <dataField fieldName="schedule" />
+            <dataField fieldName="schedule_exceptions" />
+            <dataField fieldName="cache_profile" columns="50" />
+            <dataField fieldName="created_date" columns="10" />
+            <dataField fieldName="modified_date" columns="10" />
+            <dataField fieldName="createduser" />
+            <dataField fieldName="updateduser" />
+            <dataField fieldName="createddatetime" dataFormatString="t" columns="10" />
+            <dataField fieldName="updateddatetime" dataFormatString="t" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

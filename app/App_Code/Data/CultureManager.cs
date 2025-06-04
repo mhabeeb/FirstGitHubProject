@@ -18,6 +18,7 @@ namespace MyCompany.Data
         public const string AutoDetectCulture = "Detect,Detect";
 
         public static string[] SupportedCultures = new string[] {
+                "en-US,en-US",
                 "en-IN,en-US"};
 
         public static void Initialize()

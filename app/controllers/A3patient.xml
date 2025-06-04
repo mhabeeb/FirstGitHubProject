@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="A3patient" conflictDetection="overwriteChanges" label="A 3patient" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"a3patient"."id" "ID"
+	,"a3patient"."patientid" "Patientid"
+	,"a3patient"."namegiven" "Namegiven"
+	,"a3patient"."namefamily" "Namefamily"
+	,"a3patient"."gender" "Gender"
+	,"a3patient"."phone" "Phone"
+	,"a3patient"."addresstext" "Addresstext"
+	,"a3patient"."city" "City"
+	,"a3patient"."state" "State"
+	,"a3patient"."postalcode" "Postalcode"
+	,"a3patient"."maritalstatus" "Maritalstatus"
+	,"a3patient"."birthdate" "Birthdate"
+	,"a3patient"."occupation" "Occupation"
+	,"a3patient"."identifiertypecode" "Identifiertypecode"
+	,"a3patient"."identifiersystem" "Identifiersystem"
+	,"a3patient"."nationalid" "Nationalid"
+	,"a3patient"."createduser" "Createduser"
+	,"a3patient"."updateduser" "Updateduser"
+	,"a3patient"."createddatetime" "Createddatetime"
+	,"a3patient"."updateddatetime" "Updateddatetime"
+	,"a3patient"."providerid" "Providerid"
+	,"a3patient"."photo" "Photo"
+	,"a3patient"."email" "Email"
+	,"a3patient"."nationality" "Nationality"
+	,"a3patient"."newbornyn" "Newbornyn"
+	,"a3patient"."relationship" "Relationship"
+	,"a3patient"."dependentid" "Dependentid"
+	,"a3patient"."dobhijri" "Dobhijri"
+	,"a3patient"."middlename" "Middlename"
+	,"a3patient"."policyholder" "Policyholder"
+	,"a3patient"."startdate" "Startdate"
+	,"a3patient"."enddate" "Enddate"
+	,"a3patient"."classname" "Classname"
+	,"a3patient"."memberid" "Memberid"
+	,"a3patient"."insurancename" "Insurancename"
+	,"a3patient"."roomno" "Roomno"
+	,"a3patient"."regid" "Regid"
+	,"a3patient"."policytype" "Policytype"
+	,"a3patient"."mrno" "Mrno"
+from "public"."a3patient" "a3patient"
+]]></text>
+    </command>
+  </commands>
+  <fields>
+    <field name="ID" type="Int32" allowNulls="false" isPrimaryKey="true" label="Id" />
+    <field name="Patientid" type="Int32" label="Patientid" showInSummary="true" />
+    <field name="Namegiven" type="String" label="Namegiven" length="50" showInSummary="true" />
+    <field name="Namefamily" type="String" label="Namefamily" length="50" showInSummary="true" />
+    <field name="Gender" type="String" label="Gender" length="15" showInSummary="true" />
+    <field name="Phone" type="String" label="Phone" length="50" showInSummary="true" />
+    <field name="Addresstext" type="String" label="Addresstext" length="50" />
+    <field name="City" type="String" label="City" length="50" />
+    <field name="State" type="String" label="State" length="50" />
+    <field name="Postalcode" type="String" label="Postalcode" length="50" />
+    <field name="Maritalstatus" type="String" label="Maritalstatus" length="50" />
+    <field name="Birthdate" type="DateTime" label="Birthdate" />
+    <field name="Occupation" type="String" label="Occupation" length="50" />
+    <field name="Identifiertypecode" type="String" label="Identifiertypecode" length="50" />
+    <field name="Identifiersystem" type="String" label="Identifiersystem" length="50" />
+    <field name="Nationalid" type="String" label="Nationalid" length="15" />
+    <field name="Createduser" type="String" label="Createduser" length="128" />
+    <field name="Updateduser" type="String" label="Updateduser" length="128" />
+    <field name="Createddatetime" type="DateTime" label="Createddatetime" />
+    <field name="Updateddatetime" type="DateTime" label="Updateddatetime" />
+    <field name="Providerid" type="Int32" label="Providerid" />
+    <field name="Photo" type="String" allowQBE="false" allowSorting="false" label="Photo" />
+    <field name="Email" type="String" label="Email" length="50" />
+    <field name="Nationality" type="String" label="Nationality" length="50" />
+    <field name="Newbornyn" type="Boolean" label="Newbornyn" />
+    <field name="Relationship" type="String" label="Relationship" length="50" />
+    <field name="Dependentid" type="String" label="Dependentid" length="50" />
+    <field name="Dobhijri" type="String" label="Dobhijri" length="50" />
+    <field name="Middlename" type="String" label="Middlename" length="50" />
+    <field name="Policyholder" type="String" label="Policyholder" length="50" />
+    <field name="Startdate" type="DateTime" label="Startdate" />
+    <field name="Enddate" type="DateTime" label="Enddate" />
+    <field name="Classname" type="String" label="Classname" length="50" />
+    <field name="Memberid" type="String" label="Memberid" length="50" />
+    <field name="Insurancename" type="String" label="Insurancename" length="50" />
+    <field name="Roomno" type="String" label="Roomno" length="50" />
+    <field name="Regid" type="Int32" label="Regid" />
+    <field name="Policytype" type="String" label="Policytype" length="50" />
+    <field name="Mrno" type="String" label="Mrno" length="128" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="A 3patient">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="ID" columns="15" />
+        <dataField fieldName="Patientid" columns="15" />
+        <dataField fieldName="Namegiven" columns="50" />
+        <dataField fieldName="Namefamily" columns="50" />
+        <dataField fieldName="Gender" columns="15" />
+        <dataField fieldName="Phone" columns="50" />
+        <dataField fieldName="Addresstext" columns="50" />
+        <dataField fieldName="City" columns="50" />
+        <dataField fieldName="State" columns="50" />
+        <dataField fieldName="Postalcode" columns="50" />
+        <dataField fieldName="Maritalstatus" columns="50" />
+        <dataField fieldName="Birthdate" columns="10" />
+        <dataField fieldName="Occupation" columns="50" />
+        <dataField fieldName="Identifiertypecode" columns="50" />
+        <dataField fieldName="Identifiersystem" columns="50" />
+        <dataField fieldName="Nationalid" columns="15" />
+        <dataField fieldName="Createduser" />
+        <dataField fieldName="Updateduser" />
+        <dataField fieldName="Createddatetime" columns="10" />
+        <dataField fieldName="Updateddatetime" columns="10" />
+        <dataField fieldName="Providerid" columns="15" />
+        <dataField fieldName="Photo" rows="5" />
+        <dataField fieldName="Email" columns="50" />
+        <dataField fieldName="Nationality" columns="50" />
+        <dataField fieldName="Newbornyn" />
+        <dataField fieldName="Relationship" columns="50" />
+        <dataField fieldName="Dependentid" columns="50" />
+        <dataField fieldName="Dobhijri" columns="50" />
+        <dataField fieldName="Middlename" columns="50" />
+        <dataField fieldName="Policyholder" columns="50" />
+        <dataField fieldName="Startdate" columns="10" />
+        <dataField fieldName="Enddate" columns="10" />
+        <dataField fieldName="Classname" columns="50" />
+        <dataField fieldName="Memberid" columns="50" />
+        <dataField fieldName="Insurancename" columns="50" />
+        <dataField fieldName="Roomno" columns="50" />
+        <dataField fieldName="Regid" columns="15" />
+        <dataField fieldName="Policytype" columns="50" />
+        <dataField fieldName="Mrno" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review A 3patient">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="A 3patient" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="ID" columns="15" />
+            <dataField fieldName="Patientid" columns="15" />
+            <dataField fieldName="Namegiven" columns="50" />
+            <dataField fieldName="Namefamily" columns="50" />
+            <dataField fieldName="Gender" columns="15" />
+            <dataField fieldName="Phone" columns="50" />
+            <dataField fieldName="Addresstext" columns="50" />
+            <dataField fieldName="City" columns="50" />
+            <dataField fieldName="State" columns="50" />
+            <dataField fieldName="Postalcode" columns="50" />
+            <dataField fieldName="Maritalstatus" columns="50" />
+            <dataField fieldName="Birthdate" columns="10" />
+            <dataField fieldName="Occupation" columns="50" />
+            <dataField fieldName="Identifiertypecode" columns="50" />
+            <dataField fieldName="Identifiersystem" columns="50" />
+            <dataField fieldName="Nationalid" columns="15" />
+            <dataField fieldName="Createduser" />
+            <dataField fieldName="Updateduser" />
+            <dataField fieldName="Createddatetime" columns="10" />
+            <dataField fieldName="Updateddatetime" columns="10" />
+            <dataField fieldName="Providerid" columns="15" />
+            <dataField fieldName="Photo" rows="5" />
+            <dataField fieldName="Email" columns="50" />
+            <dataField fieldName="Nationality" columns="50" />
+            <dataField fieldName="Newbornyn" />
+            <dataField fieldName="Relationship" columns="50" />
+            <dataField fieldName="Dependentid" columns="50" />
+            <dataField fieldName="Dobhijri" columns="50" />
+            <dataField fieldName="Middlename" columns="50" />
+            <dataField fieldName="Policyholder" columns="50" />
+            <dataField fieldName="Startdate" columns="10" />
+            <dataField fieldName="Enddate" columns="10" />
+            <dataField fieldName="Classname" columns="50" />
+            <dataField fieldName="Memberid" columns="50" />
+            <dataField fieldName="Insurancename" columns="50" />
+            <dataField fieldName="Roomno" columns="50" />
+            <dataField fieldName="Regid" columns="15" />
+            <dataField fieldName="Policytype" columns="50" />
+            <dataField fieldName="Mrno" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New A 3patient">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="ID" columns="15" />
+            <dataField fieldName="Patientid" columns="15" />
+            <dataField fieldName="Namegiven" columns="50" />
+            <dataField fieldName="Namefamily" columns="50" />
+            <dataField fieldName="Gender" columns="15" />
+            <dataField fieldName="Phone" columns="50" />
+            <dataField fieldName="Addresstext" columns="50" />
+            <dataField fieldName="City" columns="50" />
+            <dataField fieldName="State" columns="50" />
+            <dataField fieldName="Postalcode" columns="50" />
+            <dataField fieldName="Maritalstatus" columns="50" />
+            <dataField fieldName="Birthdate" columns="10" />
+            <dataField fieldName="Occupation" columns="50" />
+            <dataField fieldName="Identifiertypecode" columns="50" />
+            <dataField fieldName="Identifiersystem" columns="50" />
+            <dataField fieldName="Nationalid" columns="15" />
+            <dataField fieldName="Createduser" />
+            <dataField fieldName="Updateduser" />
+            <dataField fieldName="Createddatetime" columns="10" />
+            <dataField fieldName="Updateddatetime" columns="10" />
+            <dataField fieldName="Providerid" columns="15" />
+            <dataField fieldName="Photo" rows="5" />
+            <dataField fieldName="Email" columns="50" />
+            <dataField fieldName="Nationality" columns="50" />
+            <dataField fieldName="Newbornyn" />
+            <dataField fieldName="Relationship" columns="50" />
+            <dataField fieldName="Dependentid" columns="50" />
+            <dataField fieldName="Dobhijri" columns="50" />
+            <dataField fieldName="Middlename" columns="50" />
+            <dataField fieldName="Policyholder" columns="50" />
+            <dataField fieldName="Startdate" columns="10" />
+            <dataField fieldName="Enddate" columns="10" />
+            <dataField fieldName="Classname" columns="50" />
+            <dataField fieldName="Memberid" columns="50" />
+            <dataField fieldName="Insurancename" columns="50" />
+            <dataField fieldName="Roomno" columns="50" />
+            <dataField fieldName="Regid" columns="15" />
+            <dataField fieldName="Policytype" columns="50" />
+            <dataField fieldName="Mrno" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>
